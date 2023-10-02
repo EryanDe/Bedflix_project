@@ -1,0 +1,51 @@
+TP Bedflix + API
+1 message ›
+Marceau
+Il y a 40 min
+Eryan — Aujourd’hui à 16:18
+https://github.com/EryanDe/Bedflix_project.git
+GitHub
+GitHub - EryanDe/Bedflix_project
+Contribute to EryanDe/Bedflix_project development by creating an account on GitHub.
+GitHub - EryanDe/Bedflix_project
+le lien pour crée vos branches
+Eryan — Aujourd’hui à 16:34
+Frontend (Halban et Jeremy) :
+-Mise en place de la page de connexion, page d'accueil, serie et film 
+-Conception du fond présentant une galerie de films et séries
+-Mise en place du formulaire en deux étapes (écran 1: email -> écran 2: mot de passe)
+-Intégration de la navbar (Accueil / Séries / Films / Profil)
+-Intégration du footer (Réseaux sociaux + Lien vers l'API)
+-Integration du header
+
+
+Backend (Anthony et Yasmine) :
+-SQL
+-Mise en place des routes et contrôleurs pour les différentes pages (connexion, galerie, etc.)
+-Gestion des formulaires (validation des données, gestion de l'authentification)
+-Connexion à la base de données et récupération des informations nécessaires pour le frontend
+-Implémentation de la logique métier (ex. récupérer les films/séries tendances)
+
+Groupe de Karim (API) : 
+-API (Luc, Laura et Steven) :
+-Conception et mise en place de l'API pour gérer les opérations CRUD (ajout/édition/suppression de contenu)
+-Assurer que l'API répond correctement aux appels provenant du frontend et du backend
+-Gestion des données dans la base de données en utilisant les normes SQL indiquées
+Anthony.G — Aujourd’hui à 16:36
+Et @Eryan il fait quoi dans tout ça à part donner les directives?
+Eryan — Aujourd’hui à 16:36
+Le groupe d'Eryan devra travailler en étroite collaboration pour s'assurer que le frontend et le backend s'intègrent correctement. Ils devraient régulièrement faire des démonstrations pour s'assurer que tout fonctionne comme prévu.
+
+Le groupe de Karim devrait se concentrer sur la mise en place solide de l'API et s'assurer que les opérations CRUD fonctionnent correctement. Ils devraient également fournir une documentation claire sur l'utilisation de l'API.
+
+Toute l'équipe devrait communiquer régulièrement pour s'assurer que tout le monde est sur la même longueur d'onde et que les parties front, back et API fonctionnent harmonieusement.
+
+Assurez-vous que chaque membre de l'équipe a une compréhension claire des exigences de chaque tâche et des dépendances entre les différentes parties du projet.
+
+Encouragez la collaboration et l'entraide entre les membres de l'équipe au besoin.
+Eryan — Aujourd’hui à 16:37
+jte mange
+Anthony.G — Aujourd’hui à 16:38
+Je démissione de ce projet
+Eryan — Aujourd’hui à 16:41
+TECHNOLOGIES : SYMFONY/PHP/SQL/HTML/CSS/JAVASCRIPT
