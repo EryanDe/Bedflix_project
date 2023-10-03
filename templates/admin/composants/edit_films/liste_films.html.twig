@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block title %}  {% endblock %} {#  Vue que le composant  #}
+
+
+{% block body %}
+
+<h1> Liste Films</h1>
+
+<table>
+
+    {# Entete du tableau --> affichage des nom des tables de bdd #}
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Liens img</th>
+            <th>Liens film</th> {# A quoi ca correspond ?? #}
+            <th>Duree du film (en m)</th>
+            <th>Modifier</th>            
+        </tr>    
+    </thead>
+
+    {# Corp du tableau --> afficher les donne des tables correspondante de l entete #}
+    <tbody>
+
+    {% for " FILM " in "NOM_VARIABLE_BOUCLAGE" %}
+        <tr> {# MODIFIER LE NOM DES VARIABLE --> remplacer les .id --> par le nom utiliser #}
+            <td>{{ "FILMS" .id  }}</td>
+            <td>{{ "FILMS".titre }}</td>
+            <td>{{ "FILMS" .description }}</td>
+            <td>{{ "FILMS" .img }}</td>
+            <td>{{ "FILMS" .liens}}</td>
+            <td>{{ "FILMS" .duree }}</td>
+            {# Modifier les liens pour qu il renvoie sur le fichier correspondant #}
+            <td>
+                <a href="{{ path('#')}}"> Voir</a>
+                <a href="{{ path('#')}}"> Modifier</a>
+            </td>
+        </tr>
+    {% endfor %}
+    
+    </tbody>
+
+
+</table>
+
+
+{% endblock %}
