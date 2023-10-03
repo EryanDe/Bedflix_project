@@ -25,6 +25,9 @@ class AppFixtures extends Fixture
             $userArray[$i] ->setPseudoUtilisateur($faker->userName);
             $userArray[$i] ->setPhotoProfilUtilisateur('');
         }
+        // $product = new Product();
+        // $manager->persist($product);
+
         $manager->flush();
     }
 }
