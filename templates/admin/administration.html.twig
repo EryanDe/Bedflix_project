@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Administration
+{% endblock %}
+
+{% block body %}
+  <div>
+    <h1>Ici on gère les films et séries</h1> {# TITRE PROVISOIR #}
+  </div>
+
+  <div>
+    <div>
+      {# Liste des Films #}
+      <a href="{{ path('app_films') }}">films</a>
+    </div>
+
+    <div>
+      {# Liste des Series #}
+      <a href="{{ path('app_series') }}">Serie</a>
+    </div>
+  </div>
+{% endblock %}
