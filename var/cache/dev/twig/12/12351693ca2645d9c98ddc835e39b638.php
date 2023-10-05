@@ -207,6 +207,6 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
     </body>
 
 </html>
-", "base.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\base.html.twig");
+", "base.html.twig", "C:\\wamp\\www\\Bedflix\\templates\\base.html.twig");
     }
 }

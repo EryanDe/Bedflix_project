@@ -243,6 +243,6 @@ class __TwigTemplate_6bd0f6abc7d73fc3e36e455fcaa45783 extends Template
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "C:\\wamp\\www\\Bedflix\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\exception.html.twig");
     }
 }

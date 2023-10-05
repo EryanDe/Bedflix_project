@@ -6,10 +6,12 @@ use App\Repository\UtilisateursRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UtilisateursRepository::class)]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 class Utilisateurs implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -44,7 +46,7 @@ class Utilisateurs implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\ManyToMany(targetEntity: Films::class, inversedBy: 'utilisateur')]
     private Collection $film;
 
-    #[ORM\ManyToMany(targetEntity: series::class, inversedBy: 'utilisateur')]
+    #[ORM\ManyToMany(targetEntity: Series::class, inversedBy: 'utilisateur')]
     private Collection $serie;
 
     public function __construct()

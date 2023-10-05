@@ -867,6 +867,6 @@ class __TwigTemplate_f10c0f3085f91c00c54b0f260f02be70 extends Template
     </table>
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/messenger.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\messenger.html.twig");
+", "@WebProfiler/Collector/messenger.html.twig", "C:\\wamp\\www\\Bedflix\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\messenger.html.twig");
     }
 }
