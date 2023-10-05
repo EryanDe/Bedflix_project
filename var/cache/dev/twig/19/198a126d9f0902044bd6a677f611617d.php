@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* /composants_base/header_provisoire.html.twig */
+/* composants_base/header_provisoire.html.twig */
 class __TwigTemplate_7b1ed19a07813e063319d006d82d8c9f extends Template
 {
     private $source;
@@ -34,28 +34,11 @@ class __TwigTemplate_7b1ed19a07813e063319d006d82d8c9f extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/composants_base/header_provisoire.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants_base/header_provisoire.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/composants_base/header_provisoire.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants_base/header_provisoire.html.twig"));
 
-        // line 1
-        echo "
-<div>
-<a href=\"";
-        // line 3
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accueil");
-        echo "\"> Accueil </a>
-<a href=\"";
-        // line 4
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_series");
-        echo "\"> Séries </a>
-<a href=\"";
-        // line 5
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_films");
-        echo "\"> Films </a>
-
-";
         // line 9
         echo "
 <a href=\"";
@@ -78,7 +61,7 @@ class __TwigTemplate_7b1ed19a07813e063319d006d82d8c9f extends Template
             echo "\"> Deconnexion </a> ";
         }
         // line 17
-        echo "</div>";
+        echo "</div> #}";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -89,7 +72,7 @@ class __TwigTemplate_7b1ed19a07813e063319d006d82d8c9f extends Template
 
     public function getTemplateName()
     {
-        return "/composants_base/header_provisoire.html.twig";
+        return "composants_base/header_provisoire.html.twig";
     }
 
     public function isTraitable()
@@ -99,12 +82,12 @@ class __TwigTemplate_7b1ed19a07813e063319d006d82d8c9f extends Template
 
     public function getDebugInfo()
     {
-        return array (  81 => 17,  76 => 15,  72 => 14,  69 => 13,  63 => 10,  60 => 9,  55 => 5,  51 => 4,  47 => 3,  43 => 1,);
+        return array (  64 => 17,  59 => 15,  55 => 14,  52 => 13,  46 => 10,  43 => 9,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
+        return new Source("{# 
 <div>
 <a href=\"{{ path('app_accueil')}}\"> Accueil </a>
 <a href=\"{{ path('app_series')}}\"> Séries </a>
@@ -120,6 +103,6 @@ class __TwigTemplate_7b1ed19a07813e063319d006d82d8c9f extends Template
     <a href=\"{{ path('#')}}\"> </a> {# Modifier le nom de la route #}
     <a href=\"{{ path('#')}}\"> Deconnexion </a> {# Modifier le nom de la route #}
 {% endif %}
-</div>", "/composants_base/header_provisoire.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\composants_base\\header_provisoire.html.twig");
+</div> #}", "composants_base/header_provisoire.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\composants_base\\header_provisoire.html.twig");
     }
 }

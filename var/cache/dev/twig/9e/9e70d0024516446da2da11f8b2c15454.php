@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* /composants_base/header.html.twig */
+/* composants_base/header.html.twig */
 class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
 {
     private $source;
@@ -36,10 +36,10 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/composants_base/header.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants_base/header.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/composants_base/header.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants_base/header.html.twig"));
 
         // line 1
         $this->displayBlock('stylesheet', $context, $blocks);
@@ -171,7 +171,7 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
 
     public function getTemplateName()
     {
-        return "/composants_base/header.html.twig";
+        return "composants_base/header.html.twig";
     }
 
     public function getDebugInfo()
@@ -232,6 +232,6 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
 </header>
 <!-- Fin Header et Nav barre -->
 {% endblock %}
-", "/composants_base/header.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\composants_base\\header.html.twig");
+", "composants_base/header.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\composants_base\\header.html.twig");
     }
 }

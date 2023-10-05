@@ -190,6 +190,6 @@ class __TwigTemplate_522617cdd1548be606f63f93b92ed3a9 extends Template
     </button>
 </form>
 {% endblock %}
-", "security/login.html.twig", "C:\\wamp\\www\\Bedflix\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\security\\login.html.twig");
     }
 }

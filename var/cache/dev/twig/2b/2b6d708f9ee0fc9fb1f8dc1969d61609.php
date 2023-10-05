@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* accueil/index.html.twig */
-class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
+/* admin/composants/edit_films/ajout_films.html.twig */
+class __TwigTemplate_7e8607aa8879a29e39bc24ed36899ab6 extends Template
 {
     private $source;
     private $macros = [];
@@ -40,12 +40,12 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "accueil/index.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/composants/edit_films/ajout_films.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "accueil/index.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/composants/edit_films/ajout_films.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "accueil/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "admin/composants/edit_films/ajout_films.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -65,7 +65,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Accueil";
+        echo "Ajouter un film";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -74,7 +74,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     }
 
-    // line 7
+    // line 5
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,40 +84,16 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 8
-        echo "
+        // line 6
+        echo "    <h1>Ajouter un film</h1>
 
-<div class=\"example-wrapper\">
-
-<h1> Accueil  </h1>
-
-<div>
     ";
-        // line 16
-        echo "</div>
-
-";
-        // line 19
+        // line 9
         echo "
-";
-        // line 23
-        echo "
-<div>
-";
-        // line 26
-        echo "</div>
-
-<div>
-";
-        // line 30
-        echo "</div>
-
-<div>
-";
-        // line 34
-        echo "</div>
-
-</div>
+    <a href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("#");
+        echo "\">Retour a la liste des films</a>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -129,7 +105,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getTemplateName()
     {
-        return "accueil/index.html.twig";
+        return "admin/composants/edit_films/ajout_films.html.twig";
     }
 
     public function isTraitable()
@@ -139,48 +115,22 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  118 => 34,  113 => 30,  108 => 26,  104 => 23,  101 => 19,  97 => 16,  88 => 8,  78 => 7,  59 => 3,  36 => 1,);
+        return array (  95 => 10,  92 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
-
-
+{% block title %}Ajouter un film{% endblock %}
 
 {% block body %}
+    <h1>Ajouter un film</h1>
 
+    {# {{ include('chapitres_edit/_form.html.twig') }} #}
 
-<div class=\"example-wrapper\">
-
-<h1> Accueil  </h1>
-
-<div>
-    {#  AJOUTER BANNIERE FILMS/SERIE VEDETTE #}
-</div>
-
-{# HEADER #}
-
-{# plusieurs carrousels mêlant
- films et séries (en ce moment, 
- genres tendances, personnalisées pour l’utilisateur) #}
-
-<div>
-{# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
-</div>
-
-<div>
-{# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
-</div>
-
-<div>
-{# CARROUSEL 3 --> FILMS/SERIE  ~ essayer carrousel \"PERSONALISE\" #}
-</div>
-
-</div>
+    <a href=\"{{ path('#') }}\">Retour a la liste des films</a>
 {% endblock %}
-", "accueil/index.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\accueil\\index.html.twig");
+", "admin/composants/edit_films/ajout_films.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\admin\\composants\\edit_films\\ajout_films.html.twig");
     }
 }

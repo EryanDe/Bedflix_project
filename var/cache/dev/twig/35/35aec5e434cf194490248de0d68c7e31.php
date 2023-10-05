@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* accueil/index.html.twig */
-class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
+/* series/series.html.twig */
+class __TwigTemplate_87eab876d72fd46e276c4c148918f344 extends Template
 {
     private $source;
     private $macros = [];
@@ -40,12 +40,12 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "accueil/index.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "series/series.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "accueil/index.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "series/series.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "accueil/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "series/series.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -65,7 +65,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Accueil";
+        echo "Hello SeriesController!";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -74,7 +74,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     }
 
-    // line 7
+    // line 5
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,40 +84,23 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 8
+        // line 6
+        echo "<h1> PAGE DES SERIES </h1>
+
+
+";
+        // line 10
         echo "
 
-<div class=\"example-wrapper\">
-
-<h1> Accueil  </h1>
-
-<div>
-    ";
+";
+        // line 14
+        echo "    
+";
         // line 16
-        echo "</div>
-
+        echo "
 ";
         // line 19
-        echo "
-";
-        // line 23
-        echo "
-<div>
-";
-        // line 26
-        echo "</div>
-
-<div>
-";
-        // line 30
-        echo "</div>
-
-<div>
-";
-        // line 34
-        echo "</div>
-
-</div>
+        echo "    
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -129,7 +112,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getTemplateName()
     {
-        return "accueil/index.html.twig";
+        return "series/series.html.twig";
     }
 
     public function isTraitable()
@@ -139,48 +122,32 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  118 => 34,  113 => 30,  108 => 26,  104 => 23,  101 => 19,  97 => 16,  88 => 8,  78 => 7,  59 => 3,  36 => 1,);
+        return array (  103 => 19,  100 => 16,  97 => 14,  93 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
-
-
+{% block title %}Hello SeriesController!{% endblock %}
 
 {% block body %}
+<h1> PAGE DES SERIES </h1>
 
 
-<div class=\"example-wrapper\">
+{# AJOUTER BANNIERE FILMS #}
 
-<h1> Accueil  </h1>
 
-<div>
-    {#  AJOUTER BANNIERE FILMS/SERIE VEDETTE #}
-</div>
+{# BOUCLE CARROUSEL 1 #}
+{# {%for serie in series  %} #}
+    
+{# {% endfor %} #}
 
-{# HEADER #}
-
-{# plusieurs carrousels mêlant
- films et séries (en ce moment, 
- genres tendances, personnalisées pour l’utilisateur) #}
-
-<div>
-{# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
-</div>
-
-<div>
-{# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
-</div>
-
-<div>
-{# CARROUSEL 3 --> FILMS/SERIE  ~ essayer carrousel \"PERSONALISE\" #}
-</div>
-
-</div>
+{# BOUCLE CARROUSEL 2 #}
+{# {% for serie in series %} #}
+    
+{# {% endfor %} #}
 {% endblock %}
-", "accueil/index.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\accueil\\index.html.twig");
+", "series/series.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\series\\series.html.twig");
     }
 }

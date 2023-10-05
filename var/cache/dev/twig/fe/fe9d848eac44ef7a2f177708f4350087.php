@@ -160,6 +160,6 @@ class __TwigTemplate_fa5f34a736e8cdce23e0b827990fa696 extends Template
         <button type=\"submit\" class=\"btn\">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
-", "registration/register.html.twig", "C:\\wamp\\www\\Bedflix\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\registration\\register.html.twig");
     }
 }
