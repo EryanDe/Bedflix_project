@@ -152,7 +152,7 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
         echo "            
         <a href=\"";
         // line 45
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accueil");
         echo "\"> Deconnexion </a> ";
         // line 46
         echo "
@@ -225,7 +225,7 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
             <img id=\"BedFlixLogo\" src=\"{{ asset('images/image_profil.jpg') }}\" alt=\"Profil\" />
         {# </a>  #}
             
-        <a href=\"{{ path('')}}\"> Deconnexion </a> {# Modifier le nom de la route #}
+        <a href=\"{{ path('app_accueil')}}\"> Deconnexion </a> {# Modifier le nom de la route #}
 
         </div>
     </nav>
