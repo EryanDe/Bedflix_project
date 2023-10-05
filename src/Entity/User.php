@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -38,6 +40,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 100, nullable: true)]
     private ?string $photo_profil_utilisateur = null;
+
+    #[ORM\OneToMany(mappedBy: 'id_user', targetEntity: UserFilms::class)]
+    private Collection $userFilms;
+
+    #[ORM\OneToMany(mappedBy: 'id_user', targetEntity: UserSeries::class)]
+    private Collection $userSeries;
+
+    public function __construct()
+    {
+        $this->userFilms = new ArrayCollection();
+        $this->userSeries = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -153,6 +167,66 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPhotoProfilUtilisateur(?string $photo_profil_utilisateur): static
     {
         $this->photo_profil_utilisateur = $photo_profil_utilisateur;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, UserFilms>
+     */
+    public function getUserFilms(): Collection
+    {
+        return $this->userFilms;
+    }
+
+    public function addUserFilm(UserFilms $userFilm): static
+    {
+        if (!$this->userFilms->contains($userFilm)) {
+            $this->userFilms->add($userFilm);
+            $userFilm->setIdUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserFilm(UserFilms $userFilm): static
+    {
+        if ($this->userFilms->removeElement($userFilm)) {
+            // set the owning side to null (unless already changed)
+            if ($userFilm->getIdUser() === $this) {
+                $userFilm->setIdUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, UserSeries>
+     */
+    public function getUserSeries(): Collection
+    {
+        return $this->userSeries;
+    }
+
+    public function addUserSeries(UserSeries $userSeries): static
+    {
+        if (!$this->userSeries->contains($userSeries)) {
+            $this->userSeries->add($userSeries);
+            $userSeries->setIdUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserSeries(UserSeries $userSeries): static
+    {
+        if ($this->userSeries->removeElement($userSeries)) {
+            // set the owning side to null (unless already changed)
+            if ($userSeries->getIdUser() === $this) {
+                $userSeries->setIdUser(null);
+            }
+        }
 
         return $this;
     }
