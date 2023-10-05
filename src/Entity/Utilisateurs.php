@@ -51,6 +51,7 @@ class Utilisateurs implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function __construct()
     {
+        $this->photo_profil_utilisateur = "default.png";
         $this->film = new ArrayCollection();
         $this->serie = new ArrayCollection();
     }
