@@ -22,9 +22,6 @@ class Episodes
     #[ORM\Column]
     private ?int $duree_episode = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $series = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -62,18 +59,6 @@ class Episodes
     public function setDureeEpisode(int $duree_episode): static
     {
         $this->duree_episode = $duree_episode;
-
-        return $this;
-    }
-
-    public function getSeries(): ?string
-    {
-        return $this->series;
-    }
-
-    public function setSeries(string $series): static
-    {
-        $this->series = $series;
 
         return $this;
     }

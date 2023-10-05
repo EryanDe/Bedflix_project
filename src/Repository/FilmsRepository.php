@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Films;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @extends ServiceEntityRepository<Films>
@@ -19,6 +20,23 @@ class FilmsRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Films::class);
+    }
+
+    public function findByParameters(Request $request) : array
+    {
+        $parameters = $request->query->all();
+
+        $parametersKeys = array_keys($parameters);
+
+        $builder = $this->createQueryBuilder('e');
+
+        for($i = 0; $i < count($parameters); $i++)
+        {
+            $builder->andWhere('e.' . $parametersKeys[$i] . '= :val')
+            ->setParameter('val', $parameters[$i]);
+        }
+
+        return $builder->getQuery()->getResult();
     }
 
 //    /**
