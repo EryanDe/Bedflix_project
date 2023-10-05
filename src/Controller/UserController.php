@@ -18,6 +18,6 @@ class UserController extends AbstractController
         $jsonUsers = $serializer->serialize($users, 'json');
 
         return new JsonResponse($jsonUsers, Response::HTTP_OK, ['Content-Type' =>
-    'application/json'], true);
+        'application/json'], true);
     }
 }
