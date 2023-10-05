@@ -7,7 +7,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
 
-class AppFixtures extends Fixture
+class UserFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
@@ -24,10 +24,8 @@ class AppFixtures extends Fixture
             $userArray[$i]->setPrenomUtilisateur($faker->name);
             $userArray[$i]->setPseudoUtilisateur($faker->userName);
             $userArray[$i]->setPhotoProfilUtilisateur('');
+            $manager->persist($userArray[$i]);
         }
-        // $product = new Product();
-        // $manager->persist($product);
-
         $manager->flush();
     }
 }
