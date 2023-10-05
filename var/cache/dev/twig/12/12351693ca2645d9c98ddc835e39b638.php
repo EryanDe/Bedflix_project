@@ -68,16 +68,20 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     <body>
 
-        ";
-        // line 19
-        echo "
+
         ";
         // line 20
-        $this->displayBlock('body', $context, $blocks);
+        echo "        ";
+        $this->loadTemplate("/composants_base/header.html.twig", "base.html.twig", 20)->display($context);
         // line 21
         echo "
         ";
+        // line 22
+        $this->displayBlock('body', $context, $blocks);
         // line 23
+        echo "
+        ";
+        // line 25
         echo "
     </body>
 
@@ -151,7 +155,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     }
 
-    // line 20
+    // line 22
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -174,9 +178,14 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  155 => 20,  144 => 12,  134 => 11,  124 => 9,  114 => 8,  95 => 5,  81 => 23,  78 => 21,  76 => 20,  73 => 19,  67 => 14,  65 => 11,  62 => 10,  60 => 8,  56 => 6,  53 => 5,  47 => 1,);
+        return array (  159 => 22,  148 => 12,  138 => 11,  128 => 9,  118 => 8,  99 => 5,  85 => 25,  82 => 23,  80 => 22,  77 => 21,  74 => 20,  67 => 14,  65 => 11,  62 => 10,  60 => 8,  56 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -198,7 +207,9 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     <body>
 
-        {# AJOUTER COMPOSANT HEADER #}
+
+        {# REMPLACER COMPOSANT HEADER #}
+        {% include \"/composants_base/header.html.twig\" %}
 
         {% block body %}{% endblock %}
 

@@ -1,0 +1,51 @@
+{% block stylesheet %}
+  <link rel="stylesheet" href="{{ asset('css/Navbar.css') }}" />
+{% endblock %}
+
+{% block body %}
+  <!-- Début Header et Nav barre -->
+
+<header>
+    <nav id="NavBar">
+    <!-- Coté Gauche -->
+        <div id="LeftSide">
+            <img id="BedFlixLogo" src="https://cdn.discordapp.com/attachments/1113769683485720657/1123939247171313694/image.png" id="Accueil" /> {# VOIR REMPLACER PAR COPIE LOCAL #}
+
+            <ul><!-- Liens clicables -->            
+                <li><a href="{{ path('app_accueil') }}">Accueil</a></li>          
+                <li><a href="{{ path('app_series') }}">Séries</a></li>
+                <li><a href="{{ path('app_films') }}">Films</a></li>
+                <li><a href="{{ path('app_admin')}}"> " Admin " </a></li>
+            </ul>
+        </div>
+
+        
+
+
+
+    
+    
+
+
+    <!-- Coté droit -->
+        <div id="RightSide">
+            <!-- Barre de recherche -->
+            <input type="text" name="search" placeholder="Titres, personnes, genres" />
+
+            <a href="#">Jeunesse</a>
+
+        {# <a href="{{ path('#')}}">Modifier le nom de la route --> si besoin sinon modifier en bouton dropdown  #}
+            <img id="BedFlixLogo" src="{{ asset('images/icones/NotifBell2.png') }}" alt="Notifications" />
+        {# </a>  #}
+
+        {# <a href="{{ path('#')}}">Modifier le nom de la route --> voir si Drop button ou si renvoie vers page  #}
+            <img id="BedFlixLogo" src="{{ asset('images/image_profil.jpg') }}" alt="Profil" />
+        {# </a>  #}
+            
+        <a href="{{ path('')}}"> Deconnexion </a> {# Modifier le nom de la route #}
+
+        </div>
+    </nav>
+</header>
+<!-- Fin Header et Nav barre -->
+{% endblock %}

@@ -1,0 +1,17 @@
+{# 
+<div>
+<a href="{{ path('app_accueil')}}"> Accueil </a>
+<a href="{{ path('app_series')}}"> Séries </a>
+<a href="{{ path('app_films')}}"> Films </a>
+
+{# Si l'user est une admin ca déclenche le if #}
+{# {% if app.user.id === " METTRE ICI LE NUMEROS CORRESPONDANT" %}  {% endif %}  --> peut etre aussi appliquer avec une valeur string  #}
+
+<a href="{{ path('app_admin')}}"> " Admin " </a>
+
+
+{% if app.user %} {# si l'utilisateur est connecté #}
+    <a href="{{ path('#')}}"> </a> {# Modifier le nom de la route #}
+    <a href="{{ path('#')}}"> Deconnexion </a> {# Modifier le nom de la route #}
+{% endif %}
+</div> #}

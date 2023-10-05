@@ -96,8 +96,9 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         // line 16
         echo "</div>
 
-
-
+";
+        // line 19
+        echo "
 ";
         // line 23
         echo "
@@ -138,7 +139,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  117 => 34,  112 => 30,  107 => 26,  103 => 23,  97 => 16,  88 => 8,  78 => 7,  59 => 3,  36 => 1,);
+        return array (  118 => 34,  113 => 30,  108 => 26,  104 => 23,  101 => 19,  97 => 16,  88 => 8,  78 => 7,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -160,7 +161,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
     {#  AJOUTER BANNIERE FILMS/SERIE VEDETTE #}
 </div>
 
-
+{# HEADER #}
 
 {# plusieurs carrousels mêlant
  films et séries (en ce moment, 

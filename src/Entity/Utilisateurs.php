@@ -44,7 +44,7 @@ class Utilisateurs implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\ManyToMany(targetEntity: Films::class, inversedBy: 'utilisateur')]
     private Collection $film;
 
-    #[ORM\ManyToMany(targetEntity: series::class, inversedBy: 'utilisateur')]
+    #[ORM\ManyToMany(targetEntity: Series::class, inversedBy: 'utilisateur')]
     private Collection $serie;
 
     public function __construct()

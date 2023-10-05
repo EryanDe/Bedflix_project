@@ -110,6 +110,14 @@ class __TwigTemplate_9efb86c470b9560216e46722f63e5885 extends Template
         echo "    <tbody>
 
     ";
+        // line 29
+        echo "        <tr> ";
+        // line 30
+        echo "            ";
+        // line 36
+        echo "            ";
+        // line 37
+        echo "            ";
         // line 43
         echo "    
     </tbody>
@@ -139,7 +147,7 @@ class __TwigTemplate_9efb86c470b9560216e46722f63e5885 extends Template
 
     public function getDebugInfo()
     {
-        return array (  114 => 43,  110 => 26,  103 => 20,  95 => 13,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
+        return array (  122 => 43,  120 => 37,  118 => 36,  116 => 30,  114 => 29,  110 => 26,  103 => 20,  95 => 13,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -171,16 +179,16 @@ class __TwigTemplate_9efb86c470b9560216e46722f63e5885 extends Template
     {# Corp du tableau --> afficher les donne des tables correspondante de l entete #}
     <tbody>
 
-    {# {% for \" FILM \" in \"NOM_VARIABLE_BOUCLAGE\" %}
-        <tr> MODIFIER LE NOM DES VARIABLE --> remplacer les .id --> par le nom utiliser 
-            <td>{{ \"FILMS\" .id  }}</td>
+    {# {% for \" FILM \" in \"NOM_VARIABLE_BOUCLAGE\" %} #}
+        <tr> {# MODIFIER LE NOM DES VARIABLE --> remplacer les .id --> par le nom utiliser #}
+            {# <td>{{ \"FILMS\" .id  }}</td>
             <td>{{ \"FILMS\".titre }}</td>
             <td>{{ \"FILMS\" .description }}</td>
             <td>{{ \"FILMS\" .img }}</td>
             <td>{{ \"FILMS\" .liens}}</td>
-            <td>{{ \"FILMS\" .duree }}</td>
-            {# Modifier les liens pour qu il renvoie sur le fichier correspondant
-            <td>
+            <td>{{ \"FILMS\" .duree }}</td> #}
+            {# Modifier les liens pour qu il renvoie sur le fichier correspondant #}
+            {# <td>
                 <a href=\"{{ path('#')}}\"> Voir</a>
                 <a href=\"{{ path('#')}}\"> Modifier</a>
             </td>
