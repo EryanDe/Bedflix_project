@@ -21,11 +21,11 @@
 
 
 
-
+const filmArray = {};
 
 function recupFilms() {
 
-    const filmArray = {};
+    
     fetch('https://api.betaseries.com/shows/discover?key=89ebf7db4da9&limit=5')
         .then(response => { return response.json() })
         .then(data => {
@@ -58,11 +58,11 @@ function recupFilms() {
 
 
 
-let images = [];
+let images = filmArray["image"];
 
-function createThumbnail(carouselSlider, image) {
+function createThumbnail(carouselSlider, images) {
     let img = document.createElement("img");
-    img.src = "../images/" + image;
+    img.src = filmArray["image"] ;
     img.classList.add('thumbnail');
     img.addEventListener('mousedown', OnMouseDown);
     img.setAttribute('draggable', false);
@@ -126,5 +126,5 @@ document.addEventListener('mouseup', OnMouseUp);
 
 recupFilms();
 
-createCarousel("Films", images, document.getElementById("FilmsCarousel"));
-createCarousel("Séries", images, document.getElementById("FilmsCarousel"));
+createCarousel("Films", image, document.getElementById("FilmsCarousel"));
+createCarousel("Séries", image, document.getElementById("FilmsCarousel"));

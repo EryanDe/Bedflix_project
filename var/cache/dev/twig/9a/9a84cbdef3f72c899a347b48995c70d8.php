@@ -147,13 +147,15 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         echo "    ";
         // line 56
         echo "<section id=\"FilmsCarousel\"></section>
+
+
     ";
-        // line 57
+        // line 59
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 60
+        // line 62
         echo "
     ";
-        // line 62
+        // line 64
         echo "    <div class=\"carousel-container\">
       <div class=\"carousel\">
         <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
@@ -169,7 +171,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     <div>
       ";
-        // line 77
+        // line 79
         echo "    </div>
   </div>
 ";
@@ -181,7 +183,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     }
 
-    // line 57
+    // line 59
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -191,7 +193,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 58
+        // line 60
         echo "        <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Script/Carrousel.js"), "html", null, true);
         echo "\"></script>
@@ -216,7 +218,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  195 => 58,  185 => 57,  173 => 77,  157 => 62,  154 => 60,  152 => 57,  149 => 56,  147 => 40,  144 => 38,  141 => 34,  124 => 18,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  197 => 60,  187 => 59,  175 => 79,  159 => 64,  156 => 62,  154 => 59,  149 => 56,  147 => 40,  144 => 38,  141 => 34,  124 => 18,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -277,6 +279,8 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
       </div>
     </div> #}
 <section id=\"FilmsCarousel\"></section>
+
+
     {% block javascripts %}
         <script src=\"{{ asset('Script/Carrousel.js') }}\"></script>
     {% endblock %}
