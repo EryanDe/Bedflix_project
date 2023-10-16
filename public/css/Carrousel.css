@@ -1,34 +1,22 @@
-body {
-    padding-top:150px;
-    display: flex;
-    justify-content: center;
-    align-items:end;
-    height: 100vh;
-    /* background-color: #000000; */
-   overflow: hidden;
-}
-
 .carousel-container {
-   
-    position:absolute;
-    width: 500px;
-    height: 500px;
+    /* position:absolute; */
+    /* width: 500px;
+    height: 500px; */
     justify-content: stretch;
-    
-   
 }
 
 .carousel {
     display: flex;
-    transition: transform 1s ease-in-out;
+    /* transition: transform 1s ease-in-out; */
+    justify-content: center;
+    justify-content: space-evenly;
+
 }
 
 .slide {
-    flex: 0 0 100%;
+    display: inline-flex;
 }
 
-img {
-    max-width: 100%;
+.slide img {
     height: 250px;
-    justify-content: center;
 }

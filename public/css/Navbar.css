@@ -37,19 +37,17 @@ nav li{
 
 nav #RightSide{
     display: inline-flex;
-    justify-content: space-between;
     font-size: 25px;
     align-items: center;
 }
 
-nav #RightSide input[type=text]{
+nav  input {
     border: 1px solid white;
     background-color: rgb(0, 0, 0);
-    margin-right: 15px;
-    padding: 7px 20px;
-    box-sizing: border-box;
-    size: 31px;
     color: rgb(255, 255, 255);
+    text-align: start;
+    width: 200px ;
+    height: 40px;
 }
 
 nav a{
@@ -57,16 +55,12 @@ nav a{
     text-decoration: none;
     padding: 10px;
 }
-/* 
+
 nav #RightSide img{
     cursor: pointer;
-    height: 25px;
-    width: 25px;
-    margin-bottom: 15px;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
 } 
 
-
-nav #Accueil{
-    font-weight: bold;
-} */
 

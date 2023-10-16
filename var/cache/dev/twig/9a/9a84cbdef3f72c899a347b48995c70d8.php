@@ -77,7 +77,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     }
 
-    // line 8
+    // line 7
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -87,9 +87,15 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        echo "<link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo "    <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Carrousel.css"), "html", null, true);
+        echo "\"/>
+    <link rel=\"stylesheet\" href=\"";
+        // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Accueil.css"), "html", null, true);
-        echo "\"/>";
+        echo "\"/>
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -180,7 +186,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  160 => 59,  155 => 55,  151 => 52,  136 => 36,  133 => 34,  130 => 30,  117 => 18,  112 => 14,  102 => 13,  81 => 8,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  166 => 59,  161 => 55,  157 => 52,  142 => 36,  139 => 34,  136 => 30,  123 => 18,  118 => 14,  108 => 13,  96 => 9,  91 => 8,  81 => 7,  70 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -191,10 +197,10 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
   Accueil
 {% endblock %} {# <title>Accueil - Bedflix</title> #}
 
-{# {% block stylesheets %}<link rel=\"stylesheet\" href=\"{{ asset('css/Carrousel.css') }}\"/>{% endblock %} #}
-{% block stylesheets %}<link rel=\"stylesheet\" href=\"{{ asset('css/Accueil.css') }}\"/>{% endblock %}
-
-  
+{% block stylesheets %}
+    <link rel=\"stylesheet\" href=\"{{ asset('css/Carrousel.css') }}\"/>
+    <link rel=\"stylesheet\" href=\"{{ asset('css/Accueil.css') }}\"/>
+{% endblock %}
 
 
 {% block body %}

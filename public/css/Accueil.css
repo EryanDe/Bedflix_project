@@ -16,22 +16,10 @@ body {
     font-size: large;
     height: 100vh; 
     margin: 0; 
-    /* padding-right: 200px; 
-    padding-top: 150px; */
-    /* color:rgb(255, 255, 255) */
-    
     background-image: url('../images/banniere_bedflix.png');
     background-size: cover; 
+    /* background-image: linear-gradient('../images/banniere_bedflix.png', #000000),
+                  url('../images/banniere_bedflix.png'); */
 }
 
 
-/* 
-.icone_play {
-    width: 30px;
-    height: 30px;
-}
-
-.icone_info {
-    width: 30px;
-    height: 30px;
-} */
