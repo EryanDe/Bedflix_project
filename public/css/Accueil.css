@@ -2,7 +2,8 @@ body {
     margin: 0; 
     padding: 0; 
     overflow-x: hidden;
-    /* background-color: #000000; */
+    background-color: #000000;
+    color: white;
     
 }
 
@@ -12,13 +13,14 @@ body {
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
-    /* font-size: large; */
+    font-size: large;
     height: 100vh; 
     margin: 0; 
-    padding-right: 200px; 
-    padding-top: 150px;
+    /* padding-right: 200px; 
+    padding-top: 150px; */
     /* color:rgb(255, 255, 255) */
-    background-image: url('images\banniere_bedflix.png');
+    
+    background-image: url('../images/banniere_bedflix.png');
     background-size: cover; 
 }
 
