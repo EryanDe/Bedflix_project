@@ -18,16 +18,16 @@ class Categories
     #[ORM\Column(length: 255)]
     private ?string $libelle_categorie = null;
 
-    #[ORM\ManyToMany(targetEntity: FilmsCategories::class, mappedBy: 'id_category')]
-    private Collection $filmsCategories;
+    #[ORM\ManyToMany(targetEntity: Films::class, mappedBy: 'category')]
+    private Collection $films;
 
-    #[ORM\ManyToMany(targetEntity: SeriesCategories::class, mappedBy: 'id_categorie')]
-    private Collection $seriesCategories;
+    #[ORM\ManyToMany(targetEntity: Series::class, mappedBy: 'category')]
+    private Collection $series;
 
     public function __construct()
     {
-        $this->filmsCategories = new ArrayCollection();
-        $this->seriesCategories = new ArrayCollection();
+        $this->films = new ArrayCollection();
+        $this->series = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -48,54 +48,54 @@ class Categories
     }
 
     /**
-     * @return Collection<int, FilmsCategories>
+     * @return Collection<int, Films>
      */
-    public function getFilmsCategories(): Collection
+    public function getFilms(): Collection
     {
-        return $this->filmsCategories;
+        return $this->films;
     }
 
-    public function addFilmsCategory(FilmsCategories $filmsCategory): static
+    public function addFilm(Films $film): static
     {
-        if (!$this->filmsCategories->contains($filmsCategory)) {
-            $this->filmsCategories->add($filmsCategory);
-            $filmsCategory->addIdCategory($this);
+        if (!$this->films->contains($film)) {
+            $this->films->add($film);
+            $film->addCategory($this);
         }
 
         return $this;
     }
 
-    public function removeFilmsCategory(FilmsCategories $filmsCategory): static
+    public function removeFilm(Films $film): static
     {
-        if ($this->filmsCategories->removeElement($filmsCategory)) {
-            $filmsCategory->removeIdCategory($this);
+        if ($this->films->removeElement($film)) {
+            $film->removeCategory($this);
         }
 
         return $this;
     }
 
     /**
-     * @return Collection<int, SeriesCategories>
+     * @return Collection<int, Series>
      */
-    public function getSeriesCategories(): Collection
+    public function getSeries(): Collection
     {
-        return $this->seriesCategories;
+        return $this->series;
     }
 
-    public function addSeriesCategory(SeriesCategories $seriesCategory): static
+    public function addSeries(Series $series): static
     {
-        if (!$this->seriesCategories->contains($seriesCategory)) {
-            $this->seriesCategories->add($seriesCategory);
-            $seriesCategory->addIdCategorie($this);
+        if (!$this->series->contains($series)) {
+            $this->series->add($series);
+            $series->addCategory($this);
         }
 
         return $this;
     }
 
-    public function removeSeriesCategory(SeriesCategories $seriesCategory): static
+    public function removeSeries(Series $series): static
     {
-        if ($this->seriesCategories->removeElement($seriesCategory)) {
-            $seriesCategory->removeIdCategorie($this);
+        if ($this->series->removeElement($series)) {
+            $series->removeCategory($this);
         }
 
         return $this;
