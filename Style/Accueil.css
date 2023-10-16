@@ -20,12 +20,54 @@ body {
     overflow: hidden;
 }
 
-.icone_play {
-    width: 30px;
-    height: 30px;
+
+.boutons {
+    padding-top: 10px;
 }
 
-.icone_info {
-    width: 30px;
-    height: 30px;
+.boutons button {
+    margin-right: 10px; 
+}
+
+
+.media {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: black;
+    font-size: large;
+    border:none;
+    padding-right: 10px;
+}
+
+.media .button {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: blue; 
+    color: rgb(0, 0, 0);
+    text-decoration: none;  
+}
+.media1 {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: black;
+    font-size: large;
+    background-color: rgb(60, 55, 55);
+    border:none;
+}
+
+.media1 .button {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: blue; 
+    color: rgb(60, 55, 55);
+    text-decoration: none;
+
 }
