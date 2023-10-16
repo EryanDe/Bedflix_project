@@ -1,37 +1,61 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}
+  Accueil
+{% endblock %} {# <title>Accueil - Bedflix</title> #}
 
+{# {% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/Carrousel.css') }}"/>{% endblock %} #}
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('css/Accueil.css') }}"/>{% endblock %}
+
+  
 
 
 {% block body %}
+  <div class="example-wrapper">
+    <h1>Accueil</h1>
 
+    {# AJOUTER BANNIERE FILMS/SERIE VEDETTE #}
+    <div id="MainSection">
+      <div class="SectionBox" id="Description">
+        <h1>Peaky Blinders</h1>
+        <h3>Dernière saison disponible dès maintenant !</h3>
+        <p>
+          En 1919, à Birmingham, les frères Shelby, issus d'une famille de gitans, sont à la tête d'un gang qui tire ses revenus de paris clandestins, de trafics en tous genres et de vols.
+          <br /> Tommy Shelby, le leader de la fratrie, cherche surtout à grimper dans l'échelle sociale. Par tous les moyens.
+        </p>
+      </div>
+    </div>
 
-<div class="example-wrapper">
+    {# HEADER #}
 
-<h1> Accueil  </h1>
-
-<div>
-    {#  AJOUTER BANNIERE FILMS/SERIE VEDETTE #}
-</div>
-
-{# HEADER #}
-
-{# plusieurs carrousels mêlant
+    {# plusieurs carrousels mêlant
  films et séries (en ce moment, 
  genres tendances, personnalisées pour l’utilisateur) #}
 
-<div>
-{# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
-</div>
+    {# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="slide"><img src="../images/affiche_1.jpg" alt="Affiche 1" /></div>
+        <div class="slide"><img src="../images/affiche_2.jpg" alt="Affiche 2" /></div>
+        <div class="slide"><img src="../images/affiche_joker.png" alt="Affiche 3" /></div>
+        <div class="slide"><img src="../images/affiche_4.jpg" alt="Affiche 4" /></div>
+        <div class="slide"><img src="../images/affiche_1.jpg" alt="Affiche 1" /></div>
+        <div class="slide"><img src="../images/affiche_2.jpg" alt="Affiche 2" /></div>
+        <div class="slide"><img src="../images/affiche_joker.png" alt="Affiche 3" /></div>
+        <div class="slide"><img src="../images/affiche_4.jpg" alt="Affiche 4" /></div>
+      </div>
+    </div>
 
-<div>
-{# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
-</div>
+    {# {% block javascripts %}
+        <script src="{{ asset('Script/Carrousel.js') }}"></script>
+    {% endblock %} #}
 
-<div>
-{# CARROUSEL 3 --> FILMS/SERIE  ~ essayer carrousel "PERSONALISE" #}
-</div>
+    <div>
+      {# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
+    </div>
 
-</div>
+    <div>
+      {# CARROUSEL 3 --> FILMS/SERIE ~ essayer carrousel "PERSONALISE" #}
+    </div>
+  </div>
 {% endblock %}

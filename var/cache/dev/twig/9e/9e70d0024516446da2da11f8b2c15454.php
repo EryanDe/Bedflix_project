@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* composants_base/header.html.twig */
+/* /composants_base/header.html.twig */
 class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
 {
     private $source;
@@ -36,10 +36,10 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants_base/header.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/composants_base/header.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants_base/header.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/composants_base/header.html.twig"));
 
         // line 1
         $this->displayBlock('stylesheet', $context, $blocks);
@@ -119,13 +119,6 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
             </ul>
         </div>
 
-        
-
-
-
-    
-    
-
 
     <!-- Coté droit -->
         <div id=\"RightSide\">
@@ -135,26 +128,26 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
             <a href=\"#\">Jeunesse</a>
 
         ";
-        // line 38
+        // line 31
         echo "            <img id=\"BedFlixLogo\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/icones/NotifBell2.png"), "html", null, true);
         echo "\" alt=\"Notifications\" />
         ";
-        // line 40
+        // line 33
         echo "
         ";
-        // line 42
+        // line 35
         echo "            <img id=\"BedFlixLogo\" src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/image_profil.jpg"), "html", null, true);
         echo "\" alt=\"Profil\" />
         ";
-        // line 44
+        // line 37
         echo "            
         <a href=\"";
-        // line 45
+        // line 38
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accueil");
         echo "\"> Deconnexion </a> ";
-        // line 46
+        // line 39
         echo "
         </div>
     </nav>
@@ -171,12 +164,12 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
 
     public function getTemplateName()
     {
-        return "composants_base/header.html.twig";
+        return "/composants_base/header.html.twig";
     }
 
     public function getDebugInfo()
     {
-        return array (  158 => 46,  155 => 45,  152 => 44,  147 => 42,  144 => 40,  139 => 38,  117 => 18,  113 => 17,  109 => 16,  105 => 15,  101 => 13,  93 => 6,  83 => 5,  70 => 2,  60 => 1,  50 => 5,  47 => 4,  45 => 1,);
+        return array (  151 => 39,  148 => 38,  145 => 37,  140 => 35,  137 => 33,  132 => 31,  117 => 18,  113 => 17,  109 => 16,  105 => 15,  101 => 13,  93 => 6,  83 => 5,  70 => 2,  60 => 1,  50 => 5,  47 => 4,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -202,13 +195,6 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
             </ul>
         </div>
 
-        
-
-
-
-    
-    
-
 
     <!-- Coté droit -->
         <div id=\"RightSide\">
@@ -232,6 +218,6 @@ class __TwigTemplate_cc205a18565622f974fc0bbeeb608790 extends Template
 </header>
 <!-- Fin Header et Nav barre -->
 {% endblock %}
-", "composants_base/header.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\composants_base\\header.html.twig");
+", "/composants_base/header.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\composants_base\\header.html.twig");
     }
 }

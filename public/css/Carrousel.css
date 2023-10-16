@@ -1,11 +1,10 @@
 body {
-    margin: 0;
     padding-top:150px;
     display: flex;
     justify-content: center;
     align-items:end;
     height: 100vh;
-    background-color: #000000;
+    /* background-color: #000000; */
    overflow: hidden;
 }
 

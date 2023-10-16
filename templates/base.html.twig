@@ -8,9 +8,7 @@
         {% block stylesheets %}
         {% endblock %}
 
-        {% block javascripts %}
 
-        {% endblock %}
     </head>
 
     <body>
@@ -22,7 +20,11 @@
         {% block body %}{% endblock %}
 
         {# AJOUTER COMPOSANT FOOTER #}
+        {% include "/composants_base/footer.html.twig" %}
 
     </body>
 
+        {# {% block javascripts %}
+        <script src="{{ asset('Script/Carrousel.js') }}"></script>
+        {% endblock %} #}
 </html>

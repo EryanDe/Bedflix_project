@@ -29,7 +29,6 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
-            'javascripts' => [$this, 'block_javascripts'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -60,32 +59,34 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 10
         echo "
-        ";
-        // line 11
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 14
-        echo "    </head>
+
+    </head>
 
     <body>
 
 
         ";
-        // line 20
+        // line 18
         echo "        ";
-        $this->loadTemplate("/composants_base/header.html.twig", "base.html.twig", 20)->display($context);
+        $this->loadTemplate("/composants_base/header.html.twig", "base.html.twig", 18)->display($context);
+        // line 19
+        echo "
+        ";
+        // line 20
+        $this->displayBlock('body', $context, $blocks);
         // line 21
         echo "
         ";
-        // line 22
-        $this->displayBlock('body', $context, $blocks);
         // line 23
-        echo "
-        ";
-        // line 25
+        echo "        ";
+        $this->loadTemplate("/composants_base/footer.html.twig", "base.html.twig", 23)->display($context);
+        // line 24
         echo "
     </body>
 
-</html>
+        ";
+        // line 30
+        echo "</html>
 ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -134,28 +135,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     }
 
-    // line 11
-    public function block_javascripts($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
-
-        // line 12
-        echo "
-        ";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
-
-        
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
-
-    }
-
-    // line 22
+    // line 20
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -185,7 +165,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     public function getDebugInfo()
     {
-        return array (  159 => 22,  148 => 12,  138 => 11,  128 => 9,  118 => 8,  99 => 5,  85 => 25,  82 => 23,  80 => 22,  77 => 21,  74 => 20,  67 => 14,  65 => 11,  62 => 10,  60 => 8,  56 => 6,  53 => 5,  47 => 1,);
+        return array (  139 => 20,  129 => 9,  119 => 8,  100 => 5,  89 => 30,  84 => 24,  81 => 23,  78 => 21,  76 => 20,  73 => 19,  70 => 18,  61 => 10,  59 => 8,  55 => 6,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -200,9 +180,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         {% block stylesheets %}
         {% endblock %}
 
-        {% block javascripts %}
 
-        {% endblock %}
     </head>
 
     <body>
@@ -214,9 +192,13 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         {% block body %}{% endblock %}
 
         {# AJOUTER COMPOSANT FOOTER #}
+        {% include \"/composants_base/footer.html.twig\" %}
 
     </body>
 
+        {# {% block javascripts %}
+        <script src=\"{{ asset('Script/Carrousel.js') }}\"></script>
+        {% endblock %} #}
 </html>
 ", "base.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\base.html.twig");
     }
