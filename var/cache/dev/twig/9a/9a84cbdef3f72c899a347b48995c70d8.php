@@ -144,23 +144,9 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         echo "
     ";
         // line 40
-        echo "    <div class=\"carousel-container\">
-      <div class=\"carousel\">
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-      </div>
-    </div>
-
+        echo "    ";
+        // line 56
+        echo "<section id=\"FilmsCarousel\"></section>
     ";
         // line 57
         $this->displayBlock('javascripts', $context, $blocks);
@@ -230,7 +216,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  209 => 58,  199 => 57,  187 => 77,  171 => 62,  168 => 60,  166 => 57,  147 => 40,  144 => 38,  141 => 34,  124 => 18,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  195 => 58,  185 => 57,  173 => 77,  157 => 62,  154 => 60,  152 => 57,  149 => 56,  147 => 40,  144 => 38,  141 => 34,  124 => 18,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -274,7 +260,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
  genres tendances, personnalisées pour l’utilisateur) #}
 
     {# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
-    <div class=\"carousel-container\">
+    {# <div class=\"carousel-container\">
       <div class=\"carousel\">
         <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
         <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
@@ -289,8 +275,8 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
         <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
       </div>
-    </div>
-
+    </div> #}
+<section id=\"FilmsCarousel\"></section>
     {% block javascripts %}
         <script src=\"{{ asset('Script/Carrousel.js') }}\"></script>
     {% endblock %}
