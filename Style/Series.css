@@ -1,0 +1,100 @@
+#MainSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    font-size: large;
+    height: 100vh; 
+    margin: 0; 
+    color:rgb(255, 255, 255);
+    padding-right:200px; 
+    padding-top: 150px;
+}
+
+body {
+    background-image: url('../Images/banniere_series.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+}
+.Film{
+    display:flex;
+    
+}
+#categories {
+    width: 100px; 
+    padding: 5px;
+    font-size: 12px;
+    background: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 450px;
+    margin-top: 25px;
+    color: rgb(255, 255, 255);
+}
+
+#categories:hover {
+    background-color: rgb(154, 46, 46);
+    cursor: pointer;
+}
+
+h2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left: 360px;
+}
+
+.boutons {
+    padding-top: 10px;
+}
+
+.boutons button {
+    margin-right: 10px; 
+}
+
+
+.media {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: black;
+    font-size: large;
+    border:none;
+    padding-right: 10px;
+}
+
+.media .button {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: blue; 
+    color: rgb(0, 0, 0);
+    text-decoration: none;  
+}
+.media1 {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: black;
+    font-size: large;
+    background-color: rgb(60, 55, 55);
+    border:none;
+}
+
+.media1 .button {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: blue; 
+    color: rgb(60, 55, 55);
+    text-decoration: none;
+
+}
