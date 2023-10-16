@@ -27,16 +27,16 @@ class Series
     #[ORM\Column(length: 255)]
     private ?string $lien_serie = null;
 
-    #[ORM\OneToMany(mappedBy: 'id_serie', targetEntity: SeriesCategories::class)]
-    private Collection $seriesCategories;
-
     #[ORM\OneToMany(mappedBy: 'id_serie', targetEntity: UserSeries::class)]
     private Collection $userSeries;
 
+    #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'series')]
+    private Collection $category;
+
     public function __construct()
     {
-        $this->seriesCategories = new ArrayCollection();
         $this->userSeries = new ArrayCollection();
+        $this->category = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -93,36 +93,6 @@ class Series
     }
 
     /**
-     * @return Collection<int, SeriesCategories>
-     */
-    public function getSeriesCategories(): Collection
-    {
-        return $this->seriesCategories;
-    }
-
-    public function addSeriesCategory(SeriesCategories $seriesCategory): static
-    {
-        if (!$this->seriesCategories->contains($seriesCategory)) {
-            $this->seriesCategories->add($seriesCategory);
-            $seriesCategory->setIdSerie($this);
-        }
-
-        return $this;
-    }
-
-    public function removeSeriesCategory(SeriesCategories $seriesCategory): static
-    {
-        if ($this->seriesCategories->removeElement($seriesCategory)) {
-            // set the owning side to null (unless already changed)
-            if ($seriesCategory->getIdSerie() === $this) {
-                $seriesCategory->setIdSerie(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
      * @return Collection<int, UserSeries>
      */
     public function getUserSeries(): Collection
@@ -148,6 +118,30 @@ class Series
                 $userSeries->setIdSerie(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Categories>
+     */
+    public function getCategory(): Collection
+    {
+        return $this->category;
+    }
+
+    public function addCategory(Categories $category): static
+    {
+        if (!$this->category->contains($category)) {
+            $this->category->add($category);
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(Categories $category): static
+    {
+        $this->category->removeElement($category);
 
         return $this;
     }

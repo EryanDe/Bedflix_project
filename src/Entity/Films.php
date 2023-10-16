@@ -34,13 +34,13 @@ class Films
     #[ORM\OneToMany(mappedBy: 'id_film', targetEntity: UserFilms::class)]
     private Collection $userFilms;
 
-    #[ORM\OneToMany(mappedBy: 'id_film', targetEntity: FilmsCategories::class)]
-    private Collection $filmsCategories;
+    #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'films')]
+    private Collection $category;
 
     public function __construct()
     {
         $this->userFilms = new ArrayCollection();
-        $this->filmsCategories = new ArrayCollection();
+        $this->category = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -139,31 +139,25 @@ class Films
     }
 
     /**
-     * @return Collection<int, FilmsCategories>
+     * @return Collection<int, Categories>
      */
-    public function getFilmsCategories(): Collection
+    public function getCategory(): Collection
     {
-        return $this->filmsCategories;
+        return $this->category;
     }
 
-    public function addFilmsCategory(FilmsCategories $filmsCategory): static
+    public function addCategory(Categories $category): static
     {
-        if (!$this->filmsCategories->contains($filmsCategory)) {
-            $this->filmsCategories->add($filmsCategory);
-            $filmsCategory->setIdFilm($this);
+        if (!$this->category->contains($category)) {
+            $this->category->add($category);
         }
 
         return $this;
     }
 
-    public function removeFilmsCategory(FilmsCategories $filmsCategory): static
+    public function removeCategory(Categories $category): static
     {
-        if ($this->filmsCategories->removeElement($filmsCategory)) {
-            // set the owning side to null (unless already changed)
-            if ($filmsCategory->getIdFilm() === $this) {
-                $filmsCategory->setIdFilm(null);
-            }
-        }
+        $this->category->removeElement($category);
 
         return $this;
     }
