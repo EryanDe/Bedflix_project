@@ -28,6 +28,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
             'title' => [$this, 'block_title'],
             'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -95,6 +96,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         // line 9
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Accueil.css"), "html", null, true);
         echo "\"/>
+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\">
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -104,7 +106,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     }
 
-    // line 13
+    // line 14
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -114,12 +116,12 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 14
+        // line 15
         echo "  <div class=\"example-wrapper\">
     <h1>Accueil</h1>
 
     ";
-        // line 18
+        // line 19
         echo "    <div id=\"MainSection\">
       <div class=\"SectionBox\" id=\"Description\">
         <h1>Peaky Blinders</h1>
@@ -128,17 +130,21 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
           En 1919, à Birmingham, les frères Shelby, issus d'une famille de gitans, sont à la tête d'un gang qui tire ses revenus de paris clandestins, de trafics en tous genres et de vols.
           <br /> Tommy Shelby, le leader de la fratrie, cherche surtout à grimper dans l'échelle sociale. Par tous les moyens.
         </p>
+        <div class=\"boutons\">
+            <button class=\"media\"><a class=\"fas fa-play fa-lg\"></a> Lecture</button>
+            <button class=\"media1\"><a class=\"fas fa-info-circle fa-lg\"></a> Plus d'infos</button>
+        </div>
       </div>
     </div>
 
     ";
-        // line 30
+        // line 35
         echo "
     ";
-        // line 34
+        // line 39
         echo "
     ";
-        // line 36
+        // line 41
         echo "    <div class=\"carousel-container\">
       <div class=\"carousel\">
         <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
@@ -153,19 +159,54 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
     </div>
 
     ";
-        // line 52
+        // line 54
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 57
         echo "
-    <div>
-      ";
-        // line 55
-        echo "    </div>
+    ";
+        // line 59
+        echo "    <div class=\"carousel-container\">
+      <div class=\"carousel\">
+        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
+      </div>
+    </div>
 
     <div>
       ";
-        // line 59
+        // line 74
         echo "    </div>
   </div>
 ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 54
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 55
+        echo "        <script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Script/Carrousel.js"), "html", null, true);
+        echo "\"></script>
+    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -186,7 +227,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  166 => 59,  161 => 55,  157 => 52,  142 => 36,  139 => 34,  136 => 30,  123 => 18,  118 => 14,  108 => 13,  96 => 9,  91 => 8,  81 => 7,  70 => 4,  60 => 3,  37 => 1,);
+        return array (  206 => 55,  196 => 54,  184 => 74,  168 => 59,  165 => 57,  163 => 54,  148 => 41,  145 => 39,  142 => 35,  125 => 19,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -200,6 +241,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 {% block stylesheets %}
     <link rel=\"stylesheet\" href=\"{{ asset('css/Carrousel.css') }}\"/>
     <link rel=\"stylesheet\" href=\"{{ asset('css/Accueil.css') }}\"/>
+    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\">
 {% endblock %}
 
 
@@ -216,6 +258,10 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
           En 1919, à Birmingham, les frères Shelby, issus d'une famille de gitans, sont à la tête d'un gang qui tire ses revenus de paris clandestins, de trafics en tous genres et de vols.
           <br /> Tommy Shelby, le leader de la fratrie, cherche surtout à grimper dans l'échelle sociale. Par tous les moyens.
         </p>
+        <div class=\"boutons\">
+            <button class=\"media\"><a class=\"fas fa-play fa-lg\"></a> Lecture</button>
+            <button class=\"media1\"><a class=\"fas fa-info-circle fa-lg\"></a> Plus d'infos</button>
+        </div>
       </div>
     </div>
 
@@ -239,12 +285,22 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
       </div>
     </div>
 
-    {# {% block javascripts %}
+    {% block javascripts %}
         <script src=\"{{ asset('Script/Carrousel.js') }}\"></script>
-    {% endblock %} #}
+    {% endblock %}
 
-    <div>
-      {# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
+    {# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
+    <div class=\"carousel-container\">
+      <div class=\"carousel\">
+        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
+      </div>
     </div>
 
     <div>

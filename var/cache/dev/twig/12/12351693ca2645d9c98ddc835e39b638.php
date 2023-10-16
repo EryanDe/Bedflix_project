@@ -57,7 +57,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         ";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 10
+        // line 11
         echo "
 
     </head>
@@ -66,26 +66,26 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
 
         ";
-        // line 18
-        echo "        ";
-        $this->loadTemplate("/composants_base/header.html.twig", "base.html.twig", 18)->display($context);
         // line 19
-        echo "
-        ";
-        // line 20
-        $this->displayBlock('body', $context, $blocks);
-        // line 21
-        echo "
-        ";
-        // line 23
         echo "        ";
-        $this->loadTemplate("/composants_base/footer.html.twig", "base.html.twig", 23)->display($context);
+        $this->loadTemplate("/composants_base/header.html.twig", "base.html.twig", 19)->display($context);
+        // line 20
+        echo "
+        ";
+        // line 21
+        $this->displayBlock('body', $context, $blocks);
+        // line 22
+        echo "
+        ";
         // line 24
+        echo "        ";
+        $this->loadTemplate("/composants_base/footer.html.twig", "base.html.twig", 24)->display($context);
+        // line 25
         echo "
     </body>
 
         ";
-        // line 30
+        // line 31
         echo "</html>
 ";
         
@@ -126,7 +126,10 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 9
-        echo "        ";
+        echo "            <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/Accueil.css"), "html", null, true);
+        echo "\"/>
+        ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -135,7 +138,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     }
 
-    // line 20
+    // line 21
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -165,7 +168,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
 
     public function getDebugInfo()
     {
-        return array (  139 => 20,  129 => 9,  119 => 8,  100 => 5,  89 => 30,  84 => 24,  81 => 23,  78 => 21,  76 => 20,  73 => 19,  70 => 18,  61 => 10,  59 => 8,  55 => 6,  52 => 5,  46 => 1,);
+        return array (  142 => 21,  129 => 9,  119 => 8,  100 => 5,  89 => 31,  84 => 25,  81 => 24,  78 => 22,  76 => 21,  73 => 20,  70 => 19,  61 => 11,  59 => 8,  55 => 6,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -178,6 +181,7 @@ class __TwigTemplate_983d984dfe8635fb6392b6f4bcf42996 extends Template
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
 
         {% block stylesheets %}
+            <link rel=\"stylesheet\" href=\"{{ asset('css/Accueil.css') }}\"/>
         {% endblock %}
 
 
