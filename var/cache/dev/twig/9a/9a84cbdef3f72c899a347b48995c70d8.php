@@ -118,10 +118,9 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
         // line 15
         echo "  <div class=\"example-wrapper\">
-    <h1>Accueil</h1>
 
     ";
-        // line 19
+        // line 18
         echo "    <div id=\"MainSection\">
       <div class=\"SectionBox\" id=\"Description\">
         <h1>Peaky Blinders</h1>
@@ -138,15 +137,19 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
     </div>
 
     ";
-        // line 35
+        // line 34
         echo "
     ";
-        // line 39
+        // line 38
         echo "
     ";
-        // line 41
+        // line 40
         echo "    <div class=\"carousel-container\">
       <div class=\"carousel\">
+        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
         <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
         <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
         <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
@@ -159,12 +162,12 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
     </div>
 
     ";
-        // line 54
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 57
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 60
         echo "
     ";
-        // line 59
+        // line 62
         echo "    <div class=\"carousel-container\">
       <div class=\"carousel\">
         <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
@@ -180,7 +183,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     <div>
       ";
-        // line 74
+        // line 77
         echo "    </div>
   </div>
 ";
@@ -192,7 +195,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     }
 
-    // line 54
+    // line 57
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -202,7 +205,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 55
+        // line 58
         echo "        <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Script/Carrousel.js"), "html", null, true);
         echo "\"></script>
@@ -227,7 +230,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  206 => 55,  196 => 54,  184 => 74,  168 => 59,  165 => 57,  163 => 54,  148 => 41,  145 => 39,  142 => 35,  125 => 19,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  209 => 58,  199 => 57,  187 => 77,  171 => 62,  168 => 60,  166 => 57,  147 => 40,  144 => 38,  141 => 34,  124 => 18,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -247,7 +250,6 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
 {% block body %}
   <div class=\"example-wrapper\">
-    <h1>Accueil</h1>
 
     {# AJOUTER BANNIERE FILMS/SERIE VEDETTE #}
     <div id=\"MainSection\">
@@ -274,6 +276,10 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
     {# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
     <div class=\"carousel-container\">
       <div class=\"carousel\">
+        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
+        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
         <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
         <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
         <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>

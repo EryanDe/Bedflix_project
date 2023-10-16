@@ -17,8 +17,9 @@
 
 // updateCarousel();
 
-const carousel = document.querySelector("carousel");
-const slides = [document.querySelectorAll("img")];
+const carousel = document.getElementsByClassName('carrousel');
+const slides = document.getElementsByClassName('slide');
+console.log(slides);
 
 let currentIndex = 0;
 
