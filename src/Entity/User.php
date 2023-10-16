@@ -63,7 +63,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->email;
     }
 
-    public function setEmail(string $email): static
+    public function setEmail(string $email)
     {
         $this->email = $email;
 
@@ -92,7 +92,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return array_unique($roles);
     }
 
-    public function setRoles(array $roles): static
+    public function setRoles(array $roles)
     {
         $this->roles = $roles;
 
@@ -107,7 +107,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->password;
     }
 
-    public function setPassword(string $password): static
+    public function setPassword(string $password)
     {
         $this->password = $password;
 
@@ -128,7 +128,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->nom_utilisateur;
     }
 
-    public function setNomUtilisateur(?string $nom_utilisateur): static
+    public function setNomUtilisateur(?string $nom_utilisateur)
     {
         $this->nom_utilisateur = $nom_utilisateur;
 
@@ -140,7 +140,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->prenom_utilisateur;
     }
 
-    public function setPrenomUtilisateur(?string $prenom_utilisateur): static
+    public function setPrenomUtilisateur(?string $prenom_utilisateur)
     {
         $this->prenom_utilisateur = $prenom_utilisateur;
 
@@ -152,7 +152,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->pseudo_utilisateur;
     }
 
-    public function setPseudoUtilisateur(?string $pseudo_utilisateur): static
+    public function setPseudoUtilisateur(?string $pseudo_utilisateur)
     {
         $this->pseudo_utilisateur = $pseudo_utilisateur;
 
@@ -164,7 +164,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->photo_profil_utilisateur;
     }
 
-    public function setPhotoProfilUtilisateur(?string $photo_profil_utilisateur): static
+    public function setPhotoProfilUtilisateur(?string $photo_profil_utilisateur)
     {
         $this->photo_profil_utilisateur = $photo_profil_utilisateur;
 
@@ -179,7 +179,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->userFilms;
     }
 
-    public function addUserFilm(UserFilms $userFilm): static
+    public function addUserFilm(UserFilms $userFilm)
     {
         if (!$this->userFilms->contains($userFilm)) {
             $this->userFilms->add($userFilm);
@@ -189,7 +189,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function removeUserFilm(UserFilms $userFilm): static
+    public function removeUserFilm(UserFilms $userFilm)
     {
         if ($this->userFilms->removeElement($userFilm)) {
             // set the owning side to null (unless already changed)
@@ -209,7 +209,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->userSeries;
     }
 
-    public function addUserSeries(UserSeries $userSeries): static
+    public function addUserSeries(UserSeries $userSeries)
     {
         if (!$this->userSeries->contains($userSeries)) {
             $this->userSeries->add($userSeries);
@@ -219,7 +219,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function removeUserSeries(UserSeries $userSeries): static
+    public function removeUserSeries(UserSeries $userSeries)
     {
         if ($this->userSeries->removeElement($userSeries)) {
             // set the owning side to null (unless already changed)
