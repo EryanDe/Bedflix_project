@@ -35,12 +35,12 @@ class Films
     private Collection $userFilms;
 
     #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'films')]
-    private Collection $category;
+    private Collection $categories;
 
     public function __construct()
     {
         $this->userFilms = new ArrayCollection();
-        $this->category = new ArrayCollection();
+        $this->categories = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -53,7 +53,7 @@ class Films
         return $this->titre_film;
     }
 
-    public function setTitreFilm(?string $titre_film): static
+    public function setTitreFilm(?string $titre_film)
     {
         $this->titre_film = $titre_film;
 
@@ -65,7 +65,7 @@ class Films
         return $this->description_film;
     }
 
-    public function setDescriptionFilm(?string $description_film): static
+    public function setDescriptionFilm(?string $description_film)
     {
         $this->description_film = $description_film;
 
@@ -77,7 +77,7 @@ class Films
         return $this->affiche_film;
     }
 
-    public function setAfficheFilm(?string $affiche_film): static
+    public function setAfficheFilm(?string $affiche_film)
     {
         $this->affiche_film = $affiche_film;
 
@@ -89,7 +89,7 @@ class Films
         return $this->lien_film;
     }
 
-    public function setLienFilm(?string $lien_film): static
+    public function setLienFilm(?string $lien_film)
     {
         $this->lien_film = $lien_film;
 
@@ -101,7 +101,7 @@ class Films
         return $this->duree_film;
     }
 
-    public function setDureeFilm(?string $duree_film): static
+    public function setDureeFilm(?string $duree_film)
     {
         $this->duree_film = $duree_film;
 
@@ -116,7 +116,7 @@ class Films
         return $this->userFilms;
     }
 
-    public function addUserFilm(UserFilms $userFilm): static
+    public function addUserFilm(UserFilms $userFilm)
     {
         if (!$this->userFilms->contains($userFilm)) {
             $this->userFilms->add($userFilm);
@@ -126,7 +126,7 @@ class Films
         return $this;
     }
 
-    public function removeUserFilm(UserFilms $userFilm): static
+    public function removeUserFilm(UserFilms $userFilm)
     {
         if ($this->userFilms->removeElement($userFilm)) {
             // set the owning side to null (unless already changed)
@@ -141,23 +141,23 @@ class Films
     /**
      * @return Collection<int, Categories>
      */
-    public function getCategory(): Collection
+    public function getCategories(): Collection
     {
-        return $this->category;
+        return $this->categories;
     }
 
-    public function addCategory(Categories $category): static
+    public function addCategory(Categories $category)
     {
-        if (!$this->category->contains($category)) {
-            $this->category->add($category);
+        if (!$this->categories->contains($category)) {
+            $this->categories->add($category);
         }
 
         return $this;
     }
 
-    public function removeCategory(Categories $category): static
+    public function removeCategory(Categories $category)
     {
-        $this->category->removeElement($category);
+        $this->categories->removeElement($category);
 
         return $this;
     }

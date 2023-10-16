@@ -18,10 +18,10 @@ class Categories
     #[ORM\Column(length: 255)]
     private ?string $libelle_categorie = null;
 
-    #[ORM\ManyToMany(targetEntity: Films::class, mappedBy: 'category')]
+    #[ORM\ManyToMany(targetEntity: Films::class, mappedBy: 'categories')]
     private Collection $films;
 
-    #[ORM\ManyToMany(targetEntity: Series::class, mappedBy: 'category')]
+    #[ORM\ManyToMany(targetEntity: Series::class, mappedBy: 'categories')]
     private Collection $series;
 
     public function __construct()
@@ -40,7 +40,7 @@ class Categories
         return $this->libelle_categorie;
     }
 
-    public function setLibelleCategorie(string $libelle_categorie): static
+    public function setLibelleCategorie(string $libelle_categorie)
     {
         $this->libelle_categorie = $libelle_categorie;
 
@@ -55,7 +55,7 @@ class Categories
         return $this->films;
     }
 
-    public function addFilm(Films $film): static
+    public function addFilm(Films $film)
     {
         if (!$this->films->contains($film)) {
             $this->films->add($film);
@@ -65,7 +65,7 @@ class Categories
         return $this;
     }
 
-    public function removeFilm(Films $film): static
+    public function removeFilm(Films $film)
     {
         if ($this->films->removeElement($film)) {
             $film->removeCategory($this);
@@ -82,7 +82,7 @@ class Categories
         return $this->series;
     }
 
-    public function addSeries(Series $series): static
+    public function addSeries(Series $series)
     {
         if (!$this->series->contains($series)) {
             $this->series->add($series);
@@ -92,7 +92,7 @@ class Categories
         return $this;
     }
 
-    public function removeSeries(Series $series): static
+    public function removeSeries(Series $series)
     {
         if ($this->series->removeElement($series)) {
             $series->removeCategory($this);

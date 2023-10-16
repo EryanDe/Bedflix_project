@@ -31,12 +31,16 @@ class Series
     private Collection $userSeries;
 
     #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'series')]
-    private Collection $category;
+    private Collection $categories;
+
+    #[ORM\OneToMany(mappedBy: 'serie', targetEntity: Saisons::class, orphanRemoval: true)]
+    private Collection $saisons;
 
     public function __construct()
     {
         $this->userSeries = new ArrayCollection();
-        $this->category = new ArrayCollection();
+        $this->categories = new ArrayCollection();
+        $this->saisons = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -49,7 +53,7 @@ class Series
         return $this->titre_serie;
     }
 
-    public function setTitreSerie(string $titre_serie): static
+    public function setTitreSerie(string $titre_serie)
     {
         $this->titre_serie = $titre_serie;
 
@@ -61,7 +65,7 @@ class Series
         return $this->description_serie;
     }
 
-    public function setDescriptionSerie(string $description_serie): static
+    public function setDescriptionSerie(string $description_serie)
     {
         $this->description_serie = $description_serie;
 
@@ -73,7 +77,7 @@ class Series
         return $this->affiche_serie;
     }
 
-    public function setAfficheSerie(string $affiche_serie): static
+    public function setAfficheSerie(string $affiche_serie)
     {
         $this->affiche_serie = $affiche_serie;
 
@@ -85,7 +89,7 @@ class Series
         return $this->lien_serie;
     }
 
-    public function setLienSerie(string $lien_serie): static
+    public function setLienSerie(string $lien_serie)
     {
         $this->lien_serie = $lien_serie;
 
@@ -100,7 +104,7 @@ class Series
         return $this->userSeries;
     }
 
-    public function addUserSeries(UserSeries $userSeries): static
+    public function addUserSeries(UserSeries $userSeries)
     {
         if (!$this->userSeries->contains($userSeries)) {
             $this->userSeries->add($userSeries);
@@ -110,7 +114,7 @@ class Series
         return $this;
     }
 
-    public function removeUserSeries(UserSeries $userSeries): static
+    public function removeUserSeries(UserSeries $userSeries)
     {
         if ($this->userSeries->removeElement($userSeries)) {
             // set the owning side to null (unless already changed)
@@ -125,23 +129,53 @@ class Series
     /**
      * @return Collection<int, Categories>
      */
-    public function getCategory(): Collection
+    public function getCategories(): Collection
     {
-        return $this->category;
+        return $this->categories;
     }
 
-    public function addCategory(Categories $category): static
+    public function addCategory(Categories $category)
     {
-        if (!$this->category->contains($category)) {
-            $this->category->add($category);
+        if (!$this->categories->contains($category)) {
+            $this->categories->add($category);
         }
 
         return $this;
     }
 
-    public function removeCategory(Categories $category): static
+    public function removeCategory(Categories $category)
     {
-        $this->category->removeElement($category);
+        $this->categories->removeElement($category);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Saisons>
+     */
+    public function getSaisons(): Collection
+    {
+        return $this->saisons;
+    }
+
+    public function addSaison(Saisons $saison): static
+    {
+        if (!$this->saisons->contains($saison)) {
+            $this->saisons->add($saison);
+            $saison->setSerie($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSaison(Saisons $saison): static
+    {
+        if ($this->saisons->removeElement($saison)) {
+            // set the owning side to null (unless already changed)
+            if ($saison->getSerie() === $this) {
+                $saison->setSerie(null);
+            }
+        }
 
         return $this;
     }

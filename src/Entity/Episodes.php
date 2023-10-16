@@ -22,8 +22,9 @@ class Episodes
     #[ORM\Column]
     private ?int $duree_episode = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $series = null;
+    #[ORM\ManyToOne(inversedBy: 'episodes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Saisons $saison = null;
 
     public function getId(): ?int
     {
@@ -35,7 +36,7 @@ class Episodes
         return $this->numero_episode;
     }
 
-    public function setNumeroEpisode(int $numero_episode): static
+    public function setNumeroEpisode(int $numero_episode)
     {
         $this->numero_episode = $numero_episode;
 
@@ -47,7 +48,7 @@ class Episodes
         return $this->titre_episode;
     }
 
-    public function setTitreEpisode(string $titre_episode): static
+    public function setTitreEpisode(string $titre_episode)
     {
         $this->titre_episode = $titre_episode;
 
@@ -59,21 +60,21 @@ class Episodes
         return $this->duree_episode;
     }
 
-    public function setDureeEpisode(int $duree_episode): static
+    public function setDureeEpisode(int $duree_episode)
     {
         $this->duree_episode = $duree_episode;
 
         return $this;
     }
 
-    public function getSeries(): ?string
+    public function getSaison(): ?Saisons
     {
-        return $this->series;
+        return $this->saison;
     }
 
-    public function setSeries(string $series): static
+    public function setSaison(?Saisons $saison): static
     {
-        $this->series = $series;
+        $this->saison = $saison;
 
         return $this;
     }
