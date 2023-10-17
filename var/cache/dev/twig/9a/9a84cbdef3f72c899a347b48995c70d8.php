@@ -142,37 +142,25 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
     ";
         // line 38
         echo "
-    ";
+  ";
         // line 40
-        echo "    ";
-        // line 56
-        echo "<section id=\"FilmsCarousel\"></section>
-
+        echo "  <section id=\"FilmsCarousel\"></section>
+  
+  ";
+        // line 43
+        echo "  <section id=\"SérieCarousel\"></section>
 
     ";
-        // line 59
+        // line 45
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 62
-        echo "
-    ";
-        // line 64
-        echo "    <div class=\"carousel-container\">
-      <div class=\"carousel\">
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-      </div>
-    </div>
-
-    <div>
+        // line 46
+        echo " 
+  <div>
       ";
-        // line 79
+        // line 49
         echo "    </div>
+
+
   </div>
 ";
         
@@ -183,7 +171,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     }
 
-    // line 59
+    // line 45
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -193,11 +181,9 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 60
-        echo "        <script src=\"";
+        echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("Script/Carrousel.js"), "html", null, true);
-        echo "\"></script>
-    ";
+        echo "\"></script>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -218,7 +204,7 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
     public function getDebugInfo()
     {
-        return array (  197 => 60,  187 => 59,  175 => 79,  159 => 64,  156 => 62,  154 => 59,  149 => 56,  147 => 40,  144 => 38,  141 => 34,  124 => 18,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
+        return array (  175 => 45,  161 => 49,  157 => 46,  155 => 45,  151 => 43,  147 => 40,  144 => 38,  141 => 34,  124 => 18,  120 => 15,  110 => 14,  97 => 9,  92 => 8,  82 => 7,  71 => 4,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -261,47 +247,19 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
  films et séries (en ce moment, 
  genres tendances, personnalisées pour l’utilisateur) #}
 
-    {# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
-    {# <div class=\"carousel-container\">
-      <div class=\"carousel\">
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-      </div>
-    </div> #}
-<section id=\"FilmsCarousel\"></section>
+  {# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
+  <section id=\"FilmsCarousel\"></section>
+  
+  {# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
+  <section id=\"SérieCarousel\"></section>
 
-
-    {% block javascripts %}
-        <script src=\"{{ asset('Script/Carrousel.js') }}\"></script>
-    {% endblock %}
-
-    {# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
-    <div class=\"carousel-container\">
-      <div class=\"carousel\">
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_1.jpg\" alt=\"Affiche 1\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_2.jpg\" alt=\"Affiche 2\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_joker.png\" alt=\"Affiche 3\" /></div>
-        <div class=\"slide\"><img src=\"../images/affiche_4.jpg\" alt=\"Affiche 4\" /></div>
-      </div>
-    </div>
-
-    <div>
+    {% block javascripts %}<script src=\"{{ asset('Script/Carrousel.js') }}\"></script>{% endblock %}
+ 
+  <div>
       {# CARROUSEL 3 --> FILMS/SERIE ~ essayer carrousel \"PERSONALISE\" #}
     </div>
+
+
   </div>
 {% endblock %}
 ", "accueil/index.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\accueil\\index.html.twig");

@@ -36,46 +36,18 @@
  films et séries (en ce moment, 
  genres tendances, personnalisées pour l’utilisateur) #}
 
-    {# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
-    {# <div class="carousel-container">
-      <div class="carousel">
-        <div class="slide"><img src="../images/affiche_1.jpg" alt="Affiche 1" /></div>
-        <div class="slide"><img src="../images/affiche_2.jpg" alt="Affiche 2" /></div>
-        <div class="slide"><img src="../images/affiche_joker.png" alt="Affiche 3" /></div>
-        <div class="slide"><img src="../images/affiche_4.jpg" alt="Affiche 4" /></div>
-        <div class="slide"><img src="../images/affiche_1.jpg" alt="Affiche 1" /></div>
-        <div class="slide"><img src="../images/affiche_2.jpg" alt="Affiche 2" /></div>
-        <div class="slide"><img src="../images/affiche_joker.png" alt="Affiche 3" /></div>
-        <div class="slide"><img src="../images/affiche_4.jpg" alt="Affiche 4" /></div>
-        <div class="slide"><img src="../images/affiche_1.jpg" alt="Affiche 1" /></div>
-        <div class="slide"><img src="../images/affiche_2.jpg" alt="Affiche 2" /></div>
-        <div class="slide"><img src="../images/affiche_joker.png" alt="Affiche 3" /></div>
-        <div class="slide"><img src="../images/affiche_4.jpg" alt="Affiche 4" /></div>
-      </div>
-    </div> #}
-<section id="FilmsCarousel"></section>
+  {# CARROUSEL 1 --> FILMS/SERIE ~ #EN_CE_MOMENT #}
+  <section id="FilmsCarousel"></section>
+  
+  {# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
+  <section id="SérieCarousel"></section>
 
-
-    {% block javascripts %}
-        <script src="{{ asset('Script/Carrousel.js') }}"></script>
-    {% endblock %}
-
-    {# CARROUSEL 2 --> FILMS/SERIE ~ #TENDANCES #}
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="slide"><img src="../images/affiche_1.jpg" alt="Affiche 1" /></div>
-        <div class="slide"><img src="../images/affiche_2.jpg" alt="Affiche 2" /></div>
-        <div class="slide"><img src="../images/affiche_joker.png" alt="Affiche 3" /></div>
-        <div class="slide"><img src="../images/affiche_4.jpg" alt="Affiche 4" /></div>
-        <div class="slide"><img src="../images/affiche_1.jpg" alt="Affiche 1" /></div>
-        <div class="slide"><img src="../images/affiche_2.jpg" alt="Affiche 2" /></div>
-        <div class="slide"><img src="../images/affiche_joker.png" alt="Affiche 3" /></div>
-        <div class="slide"><img src="../images/affiche_4.jpg" alt="Affiche 4" /></div>
-      </div>
-    </div>
-
-    <div>
+    {% block javascripts %}<script src="{{ asset('Script/Carrousel.js') }}"></script>{% endblock %}
+ 
+  <div>
       {# CARROUSEL 3 --> FILMS/SERIE ~ essayer carrousel "PERSONALISE" #}
     </div>
+
+
   </div>
 {% endblock %}
