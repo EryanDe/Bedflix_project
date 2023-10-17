@@ -1,0 +1,257 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+ body { 
+/* background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.6)),
+        url("https: //assets.nflxext.com/ffe/siteui/vlv3/9db4a880-3034-4e98-bdea-5d983e86bf52/e51f7928-e078-4d74-95ef-15815021f579/FR-fr-20230925-popsignuptwoweeks-perspective_alpha_website_small.jpg"),
+        url("../../public/assets/img_login/FR-fr-20230925-popsignuptwoweeks-perspective_alpha_website_small.jpg"); */
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(46, 46, 44, 0.6)),
+            url("{{ asset('../../public/assets/img_login/FR-fr-20230925-popsignuptwoweeks-perspective_alpha_website_small.jpg') }}");
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+     object-fit: cover; 
+ background-size: cover;
+} 
+
+/* CSS pour centrer la login-zone */
+.body {
+    margin: 0;
+    /* Réinitialiser les marges par défaut du body */
+    padding: 0;
+    /* Réinitialiser les rembourrages par défaut du body */
+    height: 100vh;
+    /* Prendre la hauteur complète de la vue */
+    display: flex;
+    /* Utiliser la flexbox pour centrer verticalement et horizontalement */
+    flex-direction: column;
+    /* Disposer les éléments verticalement */
+    justify-content: center;
+    /* Centrer verticalement */
+    align-items: center;
+    /* Centrer horizontalement */
+}
+
+/* HEADER */
+
+
+
+/* CSS pour le header */
+/* .header-login {
+    text-align: left;
+    /* Aligner le contenu du header à gauche */
+/* padding: 10px; */
+/* Ajouter un peu d'espacement autour de l'image */
+/* display: flex; */
+/* justify-content: flex-start; */
+/* } */
+*/ .header-login img {
+    width: 100px;
+    /* Largeur de l'image */
+    height: auto;
+    /* Ajuster la hauteur de l'image en conséquence */
+    /* position:relative; */
+}
+
+
+.header-login {
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-bottom: 90%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* FORMULAIRE */
+
+/* form {
+    background-color: #fff;
+    /* Couleur de fond du formulaire */
+/* padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+/* Ombre pour le formulaire */
+/* text-align: center;
+} *
+
+/* @media only screen and (min-width:360px) { */
+
+
+
+
+
+
+.login-zone {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Couleur noire avec une transparence de 70% */
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: auto;
+    padding: 3em;
+    margin: 50%;
+    margin-bottom: 1%;
+    /* left: 0;
+    right: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Mettre au 1er plan */
+    z-index: 1;
+    width: 20em;
+    border-radius: 5px;
+    color: white;
+    text-size-adjust: auto;
+}
+
+.login-zone {
+    /* ... Other styles ... */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align items to the top horizontally */
+    align-items: flex-start;
+    /* Align items to the top vertically */
+    /* overflow:inherit */
+    /* Masquer le contenu dépassant du conteneur */
+    /* Utiliser la flexbox pour centrer verticalement et horizontalement */
+    /* Disposer les éléments verticalement */
+
+}
+
+
+.login-title {
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+
+input {
+    background-color: rgb(69, 67, 67);
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bold;
+    color: white;
+}
+
+input::placeholder {
+    color: rgb(172, 163, 163);
+    /* Other styles you want to apply */
+}
+
+.login-button {
+    max-width: 100%;
+    width: 100%;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    font-size: 20px;
+
+    border-radius: 5px;
+    cursor: pointer;
+    border-style: none;
+
+}
+
+/* } */
+
+/* CSS for button and input elements */
+.login-button,
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.remember {
+    background-color: black;
+    color: rgb(105, 101, 101);
+    padding: 1%;
+    border-radius: 1px;
+}
+
+.login-visit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    text-size-adjust: auto;
+    overflow: hidden;
+
+    color: rgb(105, 101, 101);
+    padding: 1%;
+    border-radius: 1px;
+    /* Masquer le contenu dépassant du conteneur */
+}
+
+
+
+
+/* FOOTER */
+/* CSS pour placer le footer en bas */
+footer {
+    position: relative;
+    /* Position absolue pour s'assurer que le footer reste en bas */
+    bottom: 0;
+    margin-top: 20%;
+    margin-bottom: 0%;
+    padding: 3%;
+    padding-left: 10%;
+    /* Coller le footer en bas */
+    width: 100%;
+    /* Prendre la largeur complète de la vue */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(105, 101, 101);
+    /* z-index: 1; */
+
+
+}
+
+footer div {
+    margin: 1em;
+}
+
+.services div {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: flex-start; */
+    /* Use space-around to evenly distribute space between links */
+    margin: 1em;
+    /* Adjust the top margin for additional spacing */
+}
+
+.services div a {
+    margin: 1em;
+    margin-left: 0;
+
+}
+
+.language-select select {
+    background-color: black;
+    color: rgb(105, 101, 101);
+    padding: 1%;
+    border-radius: 1px;
+}
+
+/* .services {
+display: flex;
+display: flex;
+    align-items: center;
+    justify-content: space-around;
+} */
+/* html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+} */

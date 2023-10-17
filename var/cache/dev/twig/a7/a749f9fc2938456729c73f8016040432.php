@@ -65,7 +65,9 @@ class __TwigTemplate_e2a902ea7e874b7212e50872ee1deee9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Administration ";
+        // line 4
+        echo "  Administration
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -74,7 +76,7 @@ class __TwigTemplate_e2a902ea7e874b7212e50872ee1deee9 extends Template
 
     }
 
-    // line 6
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,33 +86,29 @@ class __TwigTemplate_e2a902ea7e874b7212e50872ee1deee9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        echo "
+        // line 8
+        echo "  <div>
+    <h1>Ici on gère les films et séries</h1> ";
+        // line 10
+        echo "  </div>
 
-<div>
-    <h1>Ici on gère les films et séries</h1>   ";
-        // line 11
-        echo "</div>
-
-<div>
-
+  <div>
     <div>
-         ";
-        // line 17
-        echo "         <a href=\"";
+      ";
+        // line 15
+        echo "      <a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_films");
-        echo "\"> films</a>
-
+        echo "\">films</a>
     </div>
 
     <div>
-        ";
-        // line 23
-        echo "    </div>
-
-
-</div>
-
+      ";
+        // line 20
+        echo "      <a href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_series");
+        echo "\">Serie</a>
+    </div>
+  </div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -132,39 +130,34 @@ class __TwigTemplate_e2a902ea7e874b7212e50872ee1deee9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  109 => 23,  100 => 17,  93 => 11,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
+        return array (  107 => 20,  99 => 15,  93 => 10,  90 => 8,  80 => 7,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Administration {% endblock %}
-
+{% block title %}
+  Administration
+{% endblock %}
 
 {% block body %}
+  <div>
+    <h1>Ici on gère les films et séries</h1> {# TITRE PROVISOIR #}
+  </div>
 
-
-<div>
-    <h1>Ici on gère les films et séries</h1>   {# TITRE PROVISOIR #}
-</div>
-
-<div>
-
+  <div>
     <div>
-         {# Liste des Films #}
-         <a href=\"{{ path('app_films')}}\"> films</a>
-
+      {# Liste des Films #}
+      <a href=\"{{ path('app_films') }}\">films</a>
     </div>
 
     <div>
-        {# Liste des Series #}
+      {# Liste des Series #}
+      <a href=\"{{ path('app_series') }}\">Serie</a>
     </div>
-
-
-</div>
-
+  </div>
 {% endblock %}
-", "admin/administration.html.twig", "C:\\Users\\Dilmamode Yasmine\\Desktop\\Bedflix_projet\\Bedflix_project\\templates\\admin\\administration.html.twig");
+", "admin/administration.html.twig", "C:\\Users\\Hal\\Downloads\\MontpellierAdrar\\MontpellierAdrarP5231000\\231016projet_bedflix_groupe\\templates\\admin\\administration.html.twig");
     }
 }

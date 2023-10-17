@@ -1,0 +1,48 @@
+{...}
+
+231017>>> 
+
+IN>>> packages/security.yaml 
+>>
+   décommenté : 
+                target: app_login
+<<
+
+
+IN>>> src/Security/LoginAuthenticator.php
+l.21>> what is a trait ? 
+
+
+>>> FORMULAiRE D'INSCRIPTION >>>>
+
+>>
+symfony console make:registration-form
+
+
+TO>> 
+ Do you want to send an email to verify the user's email address after registration? (yes/no) [yes]: 
+ !!!>>> si on dit oui, il faut utiliser un bundle extérieur qui est symfony cast verify email
+>>
+composer require symfonycasts/verify-email-bundle
+<<
+
+Ici, je ne mets "non" ; 
+
+IN>> src/Controller/RegistrationController.php
+>>
+
+    #[Route('/register', name: 'app_register')]
+    ↓          ↓              ↓
+    #[Route('/inscription', name: 'app_register')]
+<<
+
+!!!>>> formulaire 
+IN>>
+ src/Form/RegistrationFormType.php
+&&       ↨
+IN>>
+ templates/registration/register.html.twig
+
+
+
+<<<231017 

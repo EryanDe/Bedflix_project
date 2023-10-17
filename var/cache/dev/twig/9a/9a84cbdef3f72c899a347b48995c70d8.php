@@ -180,6 +180,6 @@ class __TwigTemplate_05713b4269148040bf0ed3db7fdd2d23 extends Template
 
 </div>
 {% endblock %}
-", "accueil/index.html.twig", "C:\\wamp\\www\\Bedflix\\templates\\accueil\\index.html.twig");
+", "accueil/index.html.twig", "C:\\Users\\Hal\\Downloads\\MontpellierAdrar\\MontpellierAdrarP5231000\\231016projet_bedflix_groupe\\templates\\accueil\\index.html.twig");
     }
 }

@@ -33,9 +33,13 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
         $request->getSession()->set(SecurityRequestAttributes::LAST_USERNAME, $email);
 
         return new Passport(
+            // permet d'aller chercher l'utilisateur : 
             new UserBadge($email),
+            // permet de récupérer le mdp créé : 
             new PasswordCredentials($request->request->get('password', '')),
             [
+                // badge qui permet de récupérer le csrfToken = jeton de sécurité qui permet de 
+                // vérifier que le form vient bien du site :  
                 new CsrfTokenBadge('authenticate', $request->request->get('_csrf_token')),
                 new RememberMeBadge(),
             ]
@@ -49,7 +53,9 @@ class LoginAuthenticator extends AbstractLoginFormAuthenticator
         }
 
         // For example:
-        return new RedirectResponse($this->urlGenerator->generate('app_accueil'));
+        return new RedirectResponse($this->urlGenerator->generate('app_accueil')); // → cf. LoginAuthenticator.php
+        // return new RedirectResponse($this->urlGenerator->generate('app_register'));
+        // return new RedirectResponse($this->urlGenerator->generate('app_login'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 

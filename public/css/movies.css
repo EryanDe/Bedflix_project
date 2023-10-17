@@ -1,0 +1,14 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+body {
+    /* background: linear-gradient(#161616, #a7aacc); */
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(46, 46, 44, 0.6)),
+        url("");
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    /* object-fit: cover; */
+    /* background-size: cover; */
+}
