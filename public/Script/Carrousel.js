@@ -97,7 +97,7 @@ function createCarousel(title, node) {
 
 
     // le fetch est ici pour récupéré les données et les utiliser    
-    fetch('https://api.betaseries.com/shows/discover?key=89ebf7db4da9&limit=10')
+    fetch('https://api.betaseries.com/shows/discover?key=89ebf7db4da9&limit=15')
     .then(response => { return response.json() })
     .then(data => {
         data.shows.forEach((show) => {

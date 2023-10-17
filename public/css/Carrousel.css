@@ -5,15 +5,20 @@
     justify-content: stretch;
 }
 
-.carousel {
-    display: flex;
+.carrousel {
+    /* display: flex; */
     /* transition: transform 1s ease-in-out; */
-    justify-content: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    
     margin: 5% 0% 5% 0%;
 }
 
+.carrousel-title {
+    text-align: center;
+}
+
 .carousel-slider {
+    left: -88px;
     display: flex; 
     flex-direction: row;
     flex-wrap: nowrap;
@@ -24,5 +29,11 @@
 .thumbnail {
     height: 250px;
     width: 175px;
+    margin: 1%;
 }
 
+.thumbnail:hover
+{
+    transform: scale(1.1);
+    z-index: 1;
+}
